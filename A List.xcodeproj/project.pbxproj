@@ -16,6 +16,10 @@
 		64DF68931C76E9E500A22EB7 /* A_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF68921C76E9E500A22EB7 /* A_ListUITests.swift */; };
 		64DF68A51C76F51900A22EB7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF68A41C76F51900A22EB7 /* BaseViewController.swift */; };
 		64DF68A71C76FA9500A22EB7 /* LoginWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF68A61C76FA9500A22EB7 /* LoginWithEmailVC.swift */; };
+		64DF68AC1C7972AE00A22EB7 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF68AB1C7972AD00A22EB7 /* UIViewExt.swift */; };
+		64DF68AE1C79779100A22EB7 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF68AD1C79779100A22EB7 /* UIViewControllerExt.swift */; };
+		64DF68B11C797FD800A22EB7 /* LocalizableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF68B01C797FD800A22EB7 /* LocalizableUtil.swift */; };
+		64DF68B41C79801100A22EB7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64DF68B31C79801100A22EB7 /* Localizable.strings */; };
 		E4F4617FB30CAB3B37B53223 /* Pods_A_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E177F35FC29855B6A9A85632 /* Pods_A_List.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,10 @@
 		64DF68941C76E9E500A22EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64DF68A41C76F51900A22EB7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		64DF68A61C76FA9500A22EB7 /* LoginWithEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWithEmailVC.swift; sourceTree = "<group>"; };
+		64DF68AB1C7972AD00A22EB7 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		64DF68AD1C79779100A22EB7 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		64DF68B01C797FD800A22EB7 /* LocalizableUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableUtil.swift; sourceTree = "<group>"; };
+		64DF68B31C79801100A22EB7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		76B84FCE0EE9226EF8461ECC /* Pods-A List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-A List/Pods-A List.debug.xcconfig"; sourceTree = "<group>"; };
 		BD7397200B5C8A757B173589 /* Pods-A List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A List.release.xcconfig"; path = "Pods/Target Support Files/Pods-A List/Pods-A List.release.xcconfig"; sourceTree = "<group>"; };
 		E177F35FC29855B6A9A85632 /* Pods_A_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +133,8 @@
 		64DF686E1C76E9E500A22EB7 /* A List */ = {
 			isa = PBXGroup;
 			children = (
+				64DF68B21C797FEB00A22EB7 /* Localizables */,
+				64DF68AF1C797FC300A22EB7 /* Utils */,
 				64DF686F1C76E9E500A22EB7 /* AppDelegate.swift */,
 				64DF68A31C76F4DD00A22EB7 /* Extensions */,
 				64DF68A21C76F4C200A22EB7 /* Storyboards */,
@@ -183,8 +193,26 @@
 		64DF68A31C76F4DD00A22EB7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				64DF68AB1C7972AD00A22EB7 /* UIViewExt.swift */,
+				64DF68AD1C79779100A22EB7 /* UIViewControllerExt.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		64DF68AF1C797FC300A22EB7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				64DF68B01C797FD800A22EB7 /* LocalizableUtil.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		64DF68B21C797FEB00A22EB7 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				64DF68B31C79801100A22EB7 /* Localizable.strings */,
+			);
+			name = Localizables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64DF687D1C76E9E500A22EB7 /* LaunchScreen.storyboard in Resources */,
+				64DF68B41C79801100A22EB7 /* Localizable.strings in Resources */,
 				64DF687A1C76E9E500A22EB7 /* Assets.xcassets in Resources */,
 				64DF68751C76E9E500A22EB7 /* Main.storyboard in Resources */,
 			);
@@ -371,7 +400,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				64DF68A71C76FA9500A22EB7 /* LoginWithEmailVC.swift in Sources */,
+				64DF68B11C797FD800A22EB7 /* LocalizableUtil.swift in Sources */,
 				64DF68A51C76F51900A22EB7 /* BaseViewController.swift in Sources */,
+				64DF68AE1C79779100A22EB7 /* UIViewControllerExt.swift in Sources */,
+				64DF68AC1C7972AE00A22EB7 /* UIViewExt.swift in Sources */,
 				64DF68701C76E9E500A22EB7 /* AppDelegate.swift in Sources */,
 				64DF68781C76E9E500A22EB7 /* A_List.xcdatamodeld in Sources */,
 			);
