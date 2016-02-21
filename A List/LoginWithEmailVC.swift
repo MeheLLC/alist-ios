@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginWithEmailVC: BaseViewController {
     
@@ -40,6 +42,27 @@ class LoginWithEmailVC: BaseViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowOrHide:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowOrHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        let emailValidation     = emailTextField.rx_text.map { self.isEmailValid($0) }
+        let passwordValidation  = passwordTextField.rx_text.map { !$0.isEmpty }
+        
+        let signInButtonEnabled = Observable.combineLatest(emailValidation, passwordValidation) { isEmailValid, isPasswordValid in
+            return isEmailValid && isPasswordValid
+        }
+        
+        signInButtonEnabled.bindTo(loginButton.rx_enabled).addDisposableTo(disposeBag)
+        
+    }
+    
+    // MARK: - Rules -
+    
+    private struct Regex {
+        static let email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+    }
+    
+    func isEmailValid(email: String) -> Bool {
+        let regex = Regex.email
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluateWithObject(email)
     }
 }
 
