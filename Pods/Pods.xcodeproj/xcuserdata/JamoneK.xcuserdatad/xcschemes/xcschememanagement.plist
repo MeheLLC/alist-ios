@@ -9,7 +9,52 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FontAwesomeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Moya-ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Moya.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-A List.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,7 +72,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3869CD48A4BC3937BCD2C62CE9E8E4FC</key>
+		<key>539FB68CBDC126937B02284B238970AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63A18C6A528BD7E47DDAF39B2AEAF1D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +92,47 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>989CE7CF868FAC54FFB30715FFB67B40</key>
+		<key>7D29565D87D2A74A7CD7B928183EC5EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB56515D1D59E9D23F6D3F4AA9CBF241</key>
+		<key>8BE9D4B6FF6D92923152CB0534F2BB94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>914FE04BAC075E7CF1DCD8D17A48BE77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93DDB4D07205258016E6779F2667E665</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>990A640BBBF60800F60EDDE6858DFCEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0933FC1307AD48F89C9FB7CEA3C29C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D8470470292BC39EE263E6103508E41A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E296DF12816F8083BF25FD3FB46E43C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5678FC69B99077E1972D149186B2285</key>
 		<dict>
 			<key>primary</key>
 			<true/>

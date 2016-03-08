@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641BE0BA1C8E143C0017BE3B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE0B91C8E143C0017BE3B /* BaseViewModel.swift */; };
+		642DFEF31C8909DB00709A79 /* AuthDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFEF21C8909DB00709A79 /* AuthDataManager.swift */; };
+		642DFEFA1C89F64100709A79 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFEF91C89F64100709A79 /* SignupViewModel.swift */; };
+		642DFEFC1C89F65F00709A79 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFEFB1C89F65F00709A79 /* LoginViewModel.swift */; };
+		642DFEFE1C89F68200709A79 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFEFD1C89F68200709A79 /* VenueViewModel.swift */; };
+		642DFF001C8A2F8C00709A79 /* AListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFEFF1C8A2F8C00709A79 /* AListAPI.swift */; };
+		642DFF031C8A3BAE00709A79 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF021C8A3BAE00709A79 /* UserModel.swift */; };
+		642DFF051C8A3D6500709A79 /* VenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF041C8A3D6500709A79 /* VenueModel.swift */; };
+		642DFF071C8A44F100709A79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF061C8A44F100709A79 /* Constants.swift */; };
+		642DFF091C8A5B3F00709A79 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF081C8A5B3F00709A79 /* StringExt.swift */; };
+		642DFF0B1C8A6D9E00709A79 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF0A1C8A6D9E00709A79 /* OnboardViewController.swift */; };
+		642DFF0D1C8A7FF100709A79 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642DFF0C1C8A7FF100709A79 /* App.storyboard */; };
+		642DFF101C8A880100709A79 /* AppMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF0F1C8A880100709A79 /* AppMap.swift */; };
+		642DFF121C8A882D00709A79 /* AppFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF111C8A882D00709A79 /* AppFeed.swift */; };
+		642DFF141C8A883B00709A79 /* AppQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF131C8A883B00709A79 /* AppQRCode.swift */; };
+		642DFF161C8A884A00709A79 /* AppAddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF151C8A884A00709A79 /* AppAddEvent.swift */; };
+		642DFF181C8A895200709A79 /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF171C8A895200709A79 /* AppTabController.swift */; };
+		642DFF1A1C8A8D5C00709A79 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642DFF191C8A8D5C00709A79 /* MapKit.framework */; };
+		642DFF1D1C8A8EF100709A79 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 642DFF1C1C8A8E3900709A79 /* FontAwesome.otf */; };
 		64DF68701C76E9E500A22EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF686F1C76E9E500A22EB7 /* AppDelegate.swift */; };
 		64DF68751C76E9E500A22EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DF68731C76E9E500A22EB7 /* Main.storyboard */; };
 		64DF68781C76E9E500A22EB7 /* A_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64DF68761C76E9E500A22EB7 /* A_List.xcdatamodeld */; };
@@ -42,6 +61,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		641BE0B91C8E143C0017BE3B /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		642DFEF21C8909DB00709A79 /* AuthDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDataManager.swift; sourceTree = "<group>"; };
+		642DFEF91C89F64100709A79 /* SignupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		642DFEFB1C89F65F00709A79 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		642DFEFD1C89F68200709A79 /* VenueViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
+		642DFEFF1C8A2F8C00709A79 /* AListAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AListAPI.swift; sourceTree = "<group>"; };
+		642DFF021C8A3BAE00709A79 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		642DFF041C8A3D6500709A79 /* VenueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueModel.swift; sourceTree = "<group>"; };
+		642DFF061C8A44F100709A79 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		642DFF081C8A5B3F00709A79 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		642DFF0A1C8A6D9E00709A79 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		642DFF0C1C8A7FF100709A79 /* App.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
+		642DFF0F1C8A880100709A79 /* AppMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMap.swift; sourceTree = "<group>"; };
+		642DFF111C8A882D00709A79 /* AppFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFeed.swift; sourceTree = "<group>"; };
+		642DFF131C8A883B00709A79 /* AppQRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppQRCode.swift; sourceTree = "<group>"; };
+		642DFF151C8A884A00709A79 /* AppAddEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAddEvent.swift; sourceTree = "<group>"; };
+		642DFF171C8A895200709A79 /* AppTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabController.swift; sourceTree = "<group>"; };
+		642DFF191C8A8D5C00709A79 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		642DFF1C1C8A8E3900709A79 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		64DF686C1C76E9E500A22EB7 /* A List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DF686F1C76E9E500A22EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64DF68741C76E9E500A22EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642DFF1A1C8A8D5C00709A79 /* MapKit.framework in Frameworks */,
 				E4F4617FB30CAB3B37B53223 /* Pods_A_List.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +135,7 @@
 		09B2BCFD5E2E361D8877866B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				642DFF191C8A8D5C00709A79 /* MapKit.framework */,
 				E177F35FC29855B6A9A85632 /* Pods_A_List.framework */,
 			);
 			name = Frameworks;
@@ -108,6 +148,51 @@
 				BD7397200B5C8A757B173589 /* Pods-A List.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		642DFEF11C89095200709A79 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				642DFEF21C8909DB00709A79 /* AuthDataManager.swift */,
+			);
+			name = DataManagers;
+			sourceTree = "<group>";
+		};
+		642DFEF41C890EE600709A79 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				642DFEFF1C8A2F8C00709A79 /* AListAPI.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		642DFF011C8A3B9E00709A79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				642DFF021C8A3BAE00709A79 /* UserModel.swift */,
+				642DFF041C8A3D6500709A79 /* VenueModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		642DFF0E1C8A87EF00709A79 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				642DFF0F1C8A880100709A79 /* AppMap.swift */,
+				642DFF111C8A882D00709A79 /* AppFeed.swift */,
+				642DFF131C8A883B00709A79 /* AppQRCode.swift */,
+				642DFF151C8A884A00709A79 /* AppAddEvent.swift */,
+				642DFF171C8A895200709A79 /* AppTabController.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		642DFF1B1C8A8E2800709A79 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				642DFF1C1C8A8E3900709A79 /* FontAwesome.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		64DF68631C76E9E400A22EB7 = {
@@ -135,17 +220,22 @@
 		64DF686E1C76E9E500A22EB7 /* A List */ = {
 			isa = PBXGroup;
 			children = (
+				64DF686F1C76E9E500A22EB7 /* AppDelegate.swift */,
+				642DFF1B1C8A8E2800709A79 /* Fonts */,
+				642DFF011C8A3B9E00709A79 /* Models */,
+				642DFEF41C890EE600709A79 /* Networking */,
+				642DFEF11C89095200709A79 /* DataManagers */,
 				64DF68B21C797FEB00A22EB7 /* Localizables */,
 				64DF68AF1C797FC300A22EB7 /* Utils */,
-				64DF686F1C76E9E500A22EB7 /* AppDelegate.swift */,
 				64DF68A31C76F4DD00A22EB7 /* Extensions */,
 				64DF68A21C76F4C200A22EB7 /* Storyboards */,
-				64DF68A11C76F48900A22EB7 /* Views */,
+				64DF68A11C76F48900A22EB7 /* ViewModels */,
 				64DF68A01C76F47A00A22EB7 /* Controllers */,
 				64DF68791C76E9E500A22EB7 /* Assets.xcassets */,
 				64DF687B1C76E9E500A22EB7 /* LaunchScreen.storyboard */,
 				64DF687E1C76E9E500A22EB7 /* Info.plist */,
 				64DF68761C76E9E500A22EB7 /* A_List.xcdatamodeld */,
+				642DFF061C8A44F100709A79 /* Constants.swift */,
 			);
 			path = "A List";
 			sourceTree = "<group>";
@@ -171,24 +261,31 @@
 		64DF68A01C76F47A00A22EB7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				642DFF0E1C8A87EF00709A79 /* App */,
 				64DF68A41C76F51900A22EB7 /* BaseViewController.swift */,
 				64DF68A61C76FA9500A22EB7 /* LoginWithEmailVC.swift */,
 				64DF68B51C798B8200A22EB7 /* SignupWithEmail.swift */,
+				642DFF0A1C8A6D9E00709A79 /* OnboardViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		64DF68A11C76F48900A22EB7 /* Views */ = {
+		64DF68A11C76F48900A22EB7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				642DFEF91C89F64100709A79 /* SignupViewModel.swift */,
+				642DFEFB1C89F65F00709A79 /* LoginViewModel.swift */,
+				642DFEFD1C89F68200709A79 /* VenueViewModel.swift */,
+				641BE0B91C8E143C0017BE3B /* BaseViewModel.swift */,
 			);
-			name = Views;
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		64DF68A21C76F4C200A22EB7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				64DF68731C76E9E500A22EB7 /* Main.storyboard */,
+				642DFF0C1C8A7FF100709A79 /* App.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -198,6 +295,7 @@
 			children = (
 				64DF68AB1C7972AD00A22EB7 /* UIViewExt.swift */,
 				64DF68AD1C79779100A22EB7 /* UIViewControllerExt.swift */,
+				642DFF081C8A5B3F00709A79 /* StringExt.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -231,6 +329,7 @@
 				64DF686A1C76E9E400A22EB7 /* Resources */,
 				79144D202B4CD5128FBA96E1 /* Embed Pods Frameworks */,
 				101FBED22DCDA1C33935CB91 /* Copy Pods Resources */,
+				642DFF1E1C8AD66E00709A79 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -290,6 +389,14 @@
 					64DF686B1C76E9E400A22EB7 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = W29D5BE398;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					64DF68821C76E9E500A22EB7 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -328,8 +435,10 @@
 			files = (
 				64DF687D1C76E9E500A22EB7 /* LaunchScreen.storyboard in Resources */,
 				64DF68B41C79801100A22EB7 /* Localizable.strings in Resources */,
+				642DFF1D1C8A8EF100709A79 /* FontAwesome.otf in Resources */,
 				64DF687A1C76E9E500A22EB7 /* Assets.xcassets in Resources */,
 				64DF68751C76E9E500A22EB7 /* Main.storyboard in Resources */,
+				642DFF0D1C8A7FF100709A79 /* App.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +473,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-A List/Pods-A List-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		642DFF1E1C8AD66E00709A79 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5576f658fada6c6fcb835e78ceefe57fb2bab07a 58475be4a5f2deb1f1e302e1d484ddac0335fcf2c94f143ef1652322936bc469";
 		};
 		702DEDA3F2B91438C192E7CC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -405,11 +527,27 @@
 				64DF68A71C76FA9500A22EB7 /* LoginWithEmailVC.swift in Sources */,
 				64DF68B11C797FD800A22EB7 /* LocalizableUtil.swift in Sources */,
 				64DF68B61C798B8200A22EB7 /* SignupWithEmail.swift in Sources */,
+				642DFEFE1C89F68200709A79 /* VenueViewModel.swift in Sources */,
 				64DF68A51C76F51900A22EB7 /* BaseViewController.swift in Sources */,
+				641BE0BA1C8E143C0017BE3B /* BaseViewModel.swift in Sources */,
+				642DFEF31C8909DB00709A79 /* AuthDataManager.swift in Sources */,
+				642DFEFA1C89F64100709A79 /* SignupViewModel.swift in Sources */,
+				642DFF071C8A44F100709A79 /* Constants.swift in Sources */,
+				642DFF101C8A880100709A79 /* AppMap.swift in Sources */,
+				642DFF121C8A882D00709A79 /* AppFeed.swift in Sources */,
 				64DF68AE1C79779100A22EB7 /* UIViewControllerExt.swift in Sources */,
+				642DFF031C8A3BAE00709A79 /* UserModel.swift in Sources */,
+				642DFF161C8A884A00709A79 /* AppAddEvent.swift in Sources */,
+				642DFF091C8A5B3F00709A79 /* StringExt.swift in Sources */,
+				642DFEFC1C89F65F00709A79 /* LoginViewModel.swift in Sources */,
 				64DF68AC1C7972AE00A22EB7 /* UIViewExt.swift in Sources */,
+				642DFF181C8A895200709A79 /* AppTabController.swift in Sources */,
+				642DFF001C8A2F8C00709A79 /* AListAPI.swift in Sources */,
+				642DFF0B1C8A6D9E00709A79 /* OnboardViewController.swift in Sources */,
+				642DFF051C8A3D6500709A79 /* VenueModel.swift in Sources */,
 				64DF68701C76E9E500A22EB7 /* AppDelegate.swift in Sources */,
 				64DF68781C76E9E500A22EB7 /* A_List.xcdatamodeld in Sources */,
+				642DFF141C8A883B00709A79 /* AppQRCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,10 +689,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "A List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alistapp.A-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -564,10 +706,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "A List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alistapp.A-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

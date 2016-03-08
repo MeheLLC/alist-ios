@@ -33,6 +33,20 @@ class LoginWithEmailVC: BaseViewController {
     
     @IBOutlet weak var loginButtonBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBOutlet weak var backgroundView: UIView!
+    
+    var alertController: UIAlertController? {
+        didSet {
+            self.presentViewController(alertController!, animated: true, completion: nil)
+        }
+    }
+    
+    var viewModel: loginViewModel!
+    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -43,27 +57,55 @@ class LoginWithEmailVC: BaseViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowOrHide:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowOrHide:", name: UIKeyboardWillHideNotification, object: nil)
         
-        let emailValidation     = emailTextField.rx_text.map { self.isEmailValid($0) }
-        let passwordValidation  = passwordTextField.rx_text.map { !$0.isEmpty }
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Up", style: UIBarButtonItemStyle.Plain, target: self, action: "presentSignup:")
         
-        let signInButtonEnabled = Observable.combineLatest(emailValidation, passwordValidation) { isEmailValid, isPasswordValid in
-            return isEmailValid && isPasswordValid
-        }
+        viewModel = loginViewModel(email: emailTextField.rx_text.asDriver(), password: passwordTextField.rx_text.asDriver())
         
-        signInButtonEnabled.bindTo(loginButton.rx_enabled).addDisposableTo(disposeBag)
+        viewModel.postAlertController.subscribeNext{ alert in
+            self.alertController = alert
+        }.addDisposableTo(disposeBag)
         
+        viewModel.infoValid
+            .driveNext { [unowned self] valid in
+                self.loginButton.enabled = valid
+                self.loginButton.enabled ? self.loginButton.setTitleColor(.whiteColor(), forState: .Normal) : self.loginButton.setTitleColor(.grayColor(), forState: .Normal)
+            }
+            .addDisposableTo(disposeBag)
+        
+        loginButton.rx_tap
+            .withLatestFrom(viewModel.infoValid)
+            .filter { $0 }
+            .flatMapLatest { [unowned self] valid -> Observable<AuthState> in
+                self.viewModel.login(self.emailTextField.text!, password: self.passwordTextField.text!)
+                    .observeOn(SerialDispatchQueueScheduler(globalConcurrentQueueQOS: .Default))
+            }
+            .observeOn(MainScheduler.instance)
+            .subscribeNext { [unowned self] autenticationStatus in
+                switch autenticationStatus {
+                case .Success(_):
+                    self.presentFeed()
+                case .Error(let error):
+                    self.viewModel.showAlert(asType: .Error(error), title: "Error", options: [UIAlertAction(title: "Dismiss", style: .Default, handler: nil)])
+                case .None:
+                    let alertController = UIAlertController(title: "Bad credentials", message: "Unable to login", preferredStyle: .Alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                }
+                AuthDataManager.sharedManager.userStatus.value = autenticationStatus
+            }
+            .addDisposableTo(disposeBag)
     }
     
-    // MARK: - Rules -
-    
-    private struct Regex {
-        static let email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Set image background for time of day
+        backgroundImageView.image = UIImage(named: "DayView")
+        backgroundView.alpha = 0.6
+        
+        iconImageView.image = UIImage(named: "Icon")
     }
     
-    func isEmailValid(email: String) -> Bool {
-        let regex = Regex.email
-        return NSPredicate(format: "SELF MATCHES %@", regex).evaluateWithObject(email)
-    }
 }
 
 // MARK: - UITextField Delegate -
@@ -101,5 +143,17 @@ extension LoginWithEmailVC {
                 self.view.layoutIfNeeded()
                 }, completion: nil)
         }
+    }
+    
+    func presentSignup(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("loginToSignup", sender: self)
+    }
+    
+    func presentFeed() {
+        let appStoryboard: UIStoryboard = UIStoryboard(name: "App", bundle: nil)
+        
+        let rootViewController: UITabBarController = appStoryboard.instantiateViewControllerWithIdentifier("appTabBar") as! UITabBarController
+        
+        self.presentViewController(rootViewController, animated: true, completion: nil)
     }
 }

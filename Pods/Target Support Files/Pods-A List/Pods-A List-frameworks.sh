@@ -85,11 +85,29 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-A List/Alamofire.framework"
+  install_framework "Pods-A List/Bolts.framework"
+  install_framework "Pods-A List/FBSDKCoreKit.framework"
+  install_framework "Pods-A List/FBSDKLoginKit.framework"
+  install_framework "Pods-A List/FBSDKShareKit.framework"
+  install_framework "Pods-A List/FontAwesomeKit.framework"
+  install_framework "Pods-A List/Moya.framework"
+  install_framework "Pods-A List/Moya_ObjectMapper.framework"
+  install_framework "Pods-A List/ObjectMapper.framework"
+  install_framework "Pods-A List/Result.framework"
   install_framework "Pods-A List/RxCocoa.framework"
   install_framework "Pods-A List/RxSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-A List/Alamofire.framework"
+  install_framework "Pods-A List/Bolts.framework"
+  install_framework "Pods-A List/FBSDKCoreKit.framework"
+  install_framework "Pods-A List/FBSDKLoginKit.framework"
+  install_framework "Pods-A List/FBSDKShareKit.framework"
+  install_framework "Pods-A List/FontAwesomeKit.framework"
+  install_framework "Pods-A List/Moya.framework"
+  install_framework "Pods-A List/Moya_ObjectMapper.framework"
+  install_framework "Pods-A List/ObjectMapper.framework"
+  install_framework "Pods-A List/Result.framework"
   install_framework "Pods-A List/RxCocoa.framework"
   install_framework "Pods-A List/RxSwift.framework"
 fi
