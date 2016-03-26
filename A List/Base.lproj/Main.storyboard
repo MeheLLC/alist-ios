@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="waE-ra-WQL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="waE-ra-WQL">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -154,7 +154,9 @@
                     <connections>
                         <outlet property="backgroundImage" destination="nc9-Yn-4rb" id="dpO-O7-R5W"/>
                         <outlet property="backgroundView" destination="PuX-3p-kAQ" id="xrS-hq-eRq"/>
+                        <outlet property="facebookButton" destination="ZU5-hw-s3G" id="Kbh-rk-tX2"/>
                         <outlet property="iconImageView" destination="llf-pz-lVR" id="ab2-CI-WH5"/>
+                        <outlet property="twitterButton" destination="g3l-Kj-t6j" id="Oo7-4V-YrA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHF-M1-EBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,11 +456,15 @@
                             <constraint firstItem="Hol-Hg-U1c" firstAttribute="top" secondItem="K4l-oM-zCF" secondAttribute="bottom" constant="55" id="wiA-Gp-1PW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="AD0-Fz-res"/>
+                    <navigationItem key="navigationItem" title="Sign Up" id="AD0-Fz-res"/>
                     <connections>
                         <outlet property="backgroundImage" destination="XdC-ZC-HMT" id="bz4-EF-6xX"/>
                         <outlet property="backgroundView" destination="5qA-6r-Smq" id="1Kq-j4-sa8"/>
+                        <outlet property="confirmPasswordTextField" destination="aUN-ij-R1t" id="FmY-Ai-96n"/>
+                        <outlet property="emailTextField" destination="rna-w8-X2h" id="Mfp-12-uqf"/>
                         <outlet property="iconImageView" destination="ZTk-7a-rud" id="TPv-3Q-1QJ"/>
+                        <outlet property="passwordTextField" destination="Y8N-i3-Exw" id="Cfo-Si-aBe"/>
+                        <outlet property="signUpButton" destination="K4l-oM-zCF" id="bde-tD-fWd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lus-oT-0CY" userLabel="First Responder" sceneMemberID="firstResponder"/>

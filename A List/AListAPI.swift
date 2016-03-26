@@ -12,15 +12,25 @@ import Moya
 import Alamofire
 
 typealias UserLocation = (x: Double, y: Double)
+typealias User = (userID: Int, userToken: String)
 
 enum AListAPI {
     // MARK: - User
     case AuthEmailSignup(email: String, password: String)
     case AuthEmailSignin(email: String, password: String)
+    case AuthFacebook(email: String, userID: String)
+    case AuthTwitter(userID: String, authToken: String, authSecret: String)
     
     // MARK: - Venues
     case VenueList(location: UserLocation, distance: Int)
     case VenueCreate([String: AnyObject])
+    
+    // MARK: - Map
+    case MapList(location: UserLocation, userToken: String, userID: Int)
+    
+    // MARK: - Users
+    case UserFriendRequest(fromUser: User, toUser: User)
+    case UserFriendRequestDeny(fromUser: User, toUser: User)
 }
 
 // MARK: - Provider support
@@ -33,6 +43,10 @@ extension AListAPI: TargetType {
             return "/api/v1/user/signin"
         case .AuthEmailSignup(_, _):
             return "/api/v1/user/signup"
+        case .AuthFacebook(_, _):
+            return "/api/v1/user/fb"
+        case .AuthTwitter(_, _, _):
+            return "/api/v1/user/twitter"
             
         case .VenueList(_, let distance):
             return "/api/v1/venues/list/\(distance)"
@@ -53,6 +67,15 @@ extension AListAPI: TargetType {
                 "email": email,
                 "password": password
             ]
+        case .AuthFacebook(let email, let userID):
+            return ["email": email,
+                    "userid": userID
+            ]
+        case .AuthTwitter(let userID, let authToken, let authSecret):
+            return ["userid": userID,
+                    "authtoken": authToken,
+                    "authsecret": authSecret
+            ]
             
         case .VenueList(let location, _):
             return ["location[x]": location.x,
@@ -69,6 +92,8 @@ extension AListAPI: TargetType {
         switch self {
         case .AuthEmailSignin(_, _), .AuthEmailSignup(_, _), .VenueList(_, _), .VenueCreate(_):
             return .POST
+        default:
+            return .POST
         }
     }
     
@@ -82,6 +107,9 @@ extension AListAPI: TargetType {
             return "{\"status\": \"true\", \"venues\": {\"id\": \"1\", \"name\": \"Speak easy\", \"address\": \"6th street ave, Austin, TX\"}}".dataUsingEncoding(NSUTF8StringEncoding)!
         case .VenueCreate(_):
             return "{\"status\": \"true\", \"msg\": \"Venue added\"}".dataUsingEncoding(NSUTF8StringEncoding)!
+            
+        default:
+            return NSData()
         }
     }
 }

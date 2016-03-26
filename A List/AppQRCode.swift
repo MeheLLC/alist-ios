@@ -7,7 +7,18 @@
 //
 
 import UIKit
+import Crashlytics
 
 class AppQRCode: BaseViewController {
+ 
     
+    // MARK: Lifecycle
+    
+    override func viewDidLoad() {
+        scanQRCode()
+    }
+    
+    func scanQRCode() {
+        //Crashlytics.sharedInstance().crash()
+    }
 }

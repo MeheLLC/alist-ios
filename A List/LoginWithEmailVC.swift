@@ -12,7 +12,7 @@ import RxCocoa
 
 class LoginWithEmailVC: BaseViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField.placeholder = Localizable("Email").uppercaseString
@@ -37,7 +37,7 @@ class LoginWithEmailVC: BaseViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
-    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet var backgroundView: UIView!
     
     var alertController: UIAlertController? {
         didSet {
@@ -47,17 +47,18 @@ class LoginWithEmailVC: BaseViewController {
     
     var viewModel: loginViewModel!
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = Localizable("Sign In")
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowOrHide:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowOrHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginWithEmailVC.keyboardWillShowOrHide(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginWithEmailVC.keyboardWillShowOrHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Up", style: UIBarButtonItemStyle.Plain, target: self, action: "presentSignup:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Up", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(LoginWithEmailVC.presentSignup(_:)))
+        
         
         viewModel = loginViewModel(email: emailTextField.rx_text.asDriver(), password: passwordTextField.rx_text.asDriver())
         
@@ -81,6 +82,7 @@ class LoginWithEmailVC: BaseViewController {
             }
             .observeOn(MainScheduler.instance)
             .subscribeNext { [unowned self] autenticationStatus in
+                AWLoader.hide()
                 switch autenticationStatus {
                 case .Success(_):
                     self.presentFeed()
@@ -91,13 +93,15 @@ class LoginWithEmailVC: BaseViewController {
                     alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
                     self.presentViewController(alertController, animated: true, completion: nil)
                 }
-                AuthDataManager.sharedManager.userStatus.value = autenticationStatus
+                AuthDataManager.userStatus.value = autenticationStatus
             }
             .addDisposableTo(disposeBag)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        backgroundView.frame = view.frame
         
         // Set image background for time of day
         backgroundImageView.image = UIImage(named: "DayView")

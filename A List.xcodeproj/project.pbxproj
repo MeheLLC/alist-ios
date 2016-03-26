@@ -26,6 +26,11 @@
 		642DFF181C8A895200709A79 /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642DFF171C8A895200709A79 /* AppTabController.swift */; };
 		642DFF1A1C8A8D5C00709A79 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642DFF191C8A8D5C00709A79 /* MapKit.framework */; };
 		642DFF1D1C8A8EF100709A79 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 642DFF1C1C8A8E3900709A79 /* FontAwesome.otf */; };
+		649F5A451CA44F1900A2E193 /* AWLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F5A441CA44F1900A2E193 /* AWLoader.swift */; };
+		649F5A471CA45DE800A2E193 /* FriendMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F5A461CA45DE800A2E193 /* FriendMapPin.swift */; };
+		649F5A491CA5E26500A2E193 /* onBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F5A481CA5E26500A2E193 /* onBoardViewModel.swift */; };
+		649F5A4C1CA606C500A2E193 /* FeedCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F5A4B1CA606C500A2E193 /* FeedCells.swift */; };
+		649F5A4E1CA6087100A2E193 /* VenueDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649F5A4D1CA6087100A2E193 /* VenueDataManager.swift */; };
 		64DF68701C76E9E500A22EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF686F1C76E9E500A22EB7 /* AppDelegate.swift */; };
 		64DF68751C76E9E500A22EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DF68731C76E9E500A22EB7 /* Main.storyboard */; };
 		64DF68781C76E9E500A22EB7 /* A_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64DF68761C76E9E500A22EB7 /* A_List.xcdatamodeld */; };
@@ -80,6 +85,11 @@
 		642DFF171C8A895200709A79 /* AppTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabController.swift; sourceTree = "<group>"; };
 		642DFF191C8A8D5C00709A79 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		642DFF1C1C8A8E3900709A79 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		649F5A441CA44F1900A2E193 /* AWLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWLoader.swift; sourceTree = "<group>"; };
+		649F5A461CA45DE800A2E193 /* FriendMapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendMapPin.swift; sourceTree = "<group>"; };
+		649F5A481CA5E26500A2E193 /* onBoardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onBoardViewModel.swift; sourceTree = "<group>"; };
+		649F5A4B1CA606C500A2E193 /* FeedCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCells.swift; sourceTree = "<group>"; };
+		649F5A4D1CA6087100A2E193 /* VenueDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDataManager.swift; sourceTree = "<group>"; };
 		64DF686C1C76E9E500A22EB7 /* A List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DF686F1C76E9E500A22EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64DF68741C76E9E500A22EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				642DFEF21C8909DB00709A79 /* AuthDataManager.swift */,
+				649F5A4D1CA6087100A2E193 /* VenueDataManager.swift */,
 			);
 			name = DataManagers;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 			children = (
 				642DFF021C8A3BAE00709A79 /* UserModel.swift */,
 				642DFF041C8A3D6500709A79 /* VenueModel.swift */,
+				649F5A461CA45DE800A2E193 /* FriendMapPin.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -178,6 +190,7 @@
 		642DFF0E1C8A87EF00709A79 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				649F5A4A1CA606AF00A2E193 /* Cells */,
 				642DFF0F1C8A880100709A79 /* AppMap.swift */,
 				642DFF111C8A882D00709A79 /* AppFeed.swift */,
 				642DFF131C8A883B00709A79 /* AppQRCode.swift */,
@@ -193,6 +206,14 @@
 				642DFF1C1C8A8E3900709A79 /* FontAwesome.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		649F5A4A1CA606AF00A2E193 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				649F5A4B1CA606C500A2E193 /* FeedCells.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		64DF68631C76E9E400A22EB7 = {
@@ -277,6 +298,7 @@
 				642DFEFB1C89F65F00709A79 /* LoginViewModel.swift */,
 				642DFEFD1C89F68200709A79 /* VenueViewModel.swift */,
 				641BE0B91C8E143C0017BE3B /* BaseViewModel.swift */,
+				649F5A481CA5E26500A2E193 /* onBoardViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -304,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				64DF68B01C797FD800A22EB7 /* LocalizableUtil.swift */,
+				649F5A441CA44F1900A2E193 /* AWLoader.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -323,12 +346,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64DF68971C76E9E500A22EB7 /* Build configuration list for PBXNativeTarget "A List" */;
 			buildPhases = (
-				702DEDA3F2B91438C192E7CC /* Check Pods Manifest.lock */,
+				702DEDA3F2B91438C192E7CC /* 📦 Check Pods Manifest.lock */,
 				64DF68681C76E9E400A22EB7 /* Sources */,
 				64DF68691C76E9E400A22EB7 /* Frameworks */,
 				64DF686A1C76E9E400A22EB7 /* Resources */,
-				79144D202B4CD5128FBA96E1 /* Embed Pods Frameworks */,
-				101FBED22DCDA1C33935CB91 /* Copy Pods Resources */,
+				79144D202B4CD5128FBA96E1 /* 📦 Embed Pods Frameworks */,
+				101FBED22DCDA1C33935CB91 /* 📦 Copy Pods Resources */,
 				642DFF1E1C8AD66E00709A79 /* ShellScript */,
 			);
 			buildRules = (
@@ -459,14 +482,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		101FBED22DCDA1C33935CB91 /* Copy Pods Resources */ = {
+		101FBED22DCDA1C33935CB91 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,14 +510,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5576f658fada6c6fcb835e78ceefe57fb2bab07a 58475be4a5f2deb1f1e302e1d484ddac0335fcf2c94f143ef1652322936bc469";
 		};
-		702DEDA3F2B91438C192E7CC /* Check Pods Manifest.lock */ = {
+		702DEDA3F2B91438C192E7CC /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,14 +525,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		79144D202B4CD5128FBA96E1 /* Embed Pods Frameworks */ = {
+		79144D202B4CD5128FBA96E1 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,17 +560,22 @@
 				642DFF121C8A882D00709A79 /* AppFeed.swift in Sources */,
 				64DF68AE1C79779100A22EB7 /* UIViewControllerExt.swift in Sources */,
 				642DFF031C8A3BAE00709A79 /* UserModel.swift in Sources */,
+				649F5A4C1CA606C500A2E193 /* FeedCells.swift in Sources */,
 				642DFF161C8A884A00709A79 /* AppAddEvent.swift in Sources */,
 				642DFF091C8A5B3F00709A79 /* StringExt.swift in Sources */,
 				642DFEFC1C89F65F00709A79 /* LoginViewModel.swift in Sources */,
+				649F5A451CA44F1900A2E193 /* AWLoader.swift in Sources */,
 				64DF68AC1C7972AE00A22EB7 /* UIViewExt.swift in Sources */,
 				642DFF181C8A895200709A79 /* AppTabController.swift in Sources */,
 				642DFF001C8A2F8C00709A79 /* AListAPI.swift in Sources */,
 				642DFF0B1C8A6D9E00709A79 /* OnboardViewController.swift in Sources */,
 				642DFF051C8A3D6500709A79 /* VenueModel.swift in Sources */,
 				64DF68701C76E9E500A22EB7 /* AppDelegate.swift in Sources */,
+				649F5A471CA45DE800A2E193 /* FriendMapPin.swift in Sources */,
+				649F5A491CA5E26500A2E193 /* onBoardViewModel.swift in Sources */,
 				64DF68781C76E9E500A22EB7 /* A_List.xcdatamodeld in Sources */,
 				642DFF141C8A883B00709A79 /* AppQRCode.swift in Sources */,
+				649F5A4E1CA6087100A2E193 /* VenueDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

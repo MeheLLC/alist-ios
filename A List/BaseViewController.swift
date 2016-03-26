@@ -12,11 +12,11 @@ import RxCocoa
 
 class BaseViewController: UIViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     lazy var disposeBag = DisposeBag()
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)

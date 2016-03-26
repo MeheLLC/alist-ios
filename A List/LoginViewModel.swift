@@ -29,6 +29,8 @@ class loginViewModel: BaseViewModel {
     }
     
     func login(email: String, password: String) -> Observable<AuthState> {
-        return AuthDataManager.sharedManager.signin(email, password: password)
+        UIApplication.sharedApplication().sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, forEvent:nil)
+        AWLoader.show(blurStyle: .Light, shape: .Circle)
+        return AuthDataManager.signin(email, password: password)
     }
 }
