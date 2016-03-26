@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (3.2.1)
+  - Alamofire (3.3.0)
   - Bolts (1.6.0):
     - Bolts/AppLinks (= 1.6.0)
     - Bolts/Tasks (= 1.6.0)
@@ -50,10 +50,10 @@ PODS:
   - RxCocoa (2.2.0):
     - RxSwift (~> 2.2)
   - RxSwift (2.2.0)
-  - TwitterCore (1.15.3):
+  - TwitterCore (2.0.1):
     - Fabric
-  - TwitterKit (1.15.3):
-    - TwitterCore (= 1.15.3)
+  - TwitterKit (2.0.1):
+    - TwitterCore (= 2.0.1)
 
 DEPENDENCIES:
   - Crashlytics
@@ -69,7 +69,7 @@ DEPENDENCIES:
   - TwitterKit
 
 SPEC CHECKSUMS:
-  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
@@ -83,8 +83,8 @@ SPEC CHECKSUMS:
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   RxCocoa: 42efb7a7145a8d1d5878e94ce48a580d29e0c796
   RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
-  TwitterCore: cce24b3c798993ccde72787ea79ea9a478b284e4
-  TwitterKit: 43600f2d2848c227739efea5b2939585e69339c3
+  TwitterCore: f8575c28412ab2e3fed1a153764397771de06efb
+  TwitterKit: ebc84244d4ada8cc673afd4ae7b67277e1f05a65
 
 PODFILE CHECKSUM: d110770e52f1516f2a951ea1d604c01a9557e01c
 

@@ -52,6 +52,9 @@ extension AListAPI: TargetType {
             return "/api/v1/venues/list/\(distance)"
         case .VenueCreate(_):
             return "/api/v1/venues/create"
+            
+        default:
+            fatalError("Unimplemented API")
         }
     }
     
@@ -83,6 +86,9 @@ extension AListAPI: TargetType {
             ]
         case .VenueCreate(let data):
             return data
+            
+        default:
+            fatalError("Unimplemented API")
         }
     }
     

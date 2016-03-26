@@ -13,6 +13,6 @@ import RxSwift
 class onBoardViewModel: BaseViewModel {
     
     func facebookLogin(email: String, userID: String) -> Observable<AuthState> {
-        return AuthDataManager.sharedManager.signinFacebook(email, userID: userID)
+        return AuthDataManager.signinFacebook(email, userID: userID)
     }
 }
